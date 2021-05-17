@@ -14,6 +14,17 @@ namespace VendorTracker.Models
       Name = name;
       Orders = new List<Order>{};
       Id = _vendorList.Count + 101;
+      _vendorList.Add(this);
+    }
+
+    public static List<Vendor> GetAll()
+    {
+      return _vendorList;
+    }
+
+    public static void ClearAll()
+    {
+      _vendorList.Clear();
     }
   }
 }

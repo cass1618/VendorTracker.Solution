@@ -21,10 +21,11 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void GetAll_ReturnsAllInstancesOfVendor_VendorList()
     {
+      Vendor.ClearAll();
       Vendor vendor1 = new("Vendor1");
       Vendor vendor2 = new("Vendor2");
       List<Vendor> expected = new List<Vendor>{vendor1, vendor2};
-      Assert.AreEqual(expected, Vendor.GetAll());
+      CollectionAssert.AreEqual(expected, Vendor.GetAll());
     }
 
   }
