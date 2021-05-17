@@ -13,7 +13,7 @@ namespace VendorTracker.Tests
       Vendor testVendor = new("Test Vendor");
       Assert.AreEqual(typeof(Vendor), testVendor.GetType());
       Assert.AreEqual("Test Vendor", testVendor.Name);
-      Assert.AreEqual(101, testVendor.Id);
+      Assert.AreEqual(1, testVendor.Id);
       Assert.AreEqual(typeof(List<Order>), testVendor.Orders.GetType());
     }
 
@@ -33,7 +33,7 @@ namespace VendorTracker.Tests
       Vendor.ClearAll();
       Vendor vendor1 = new("Vendor1");
       Vendor vendor2 = new("Vendor2");
-      Assert.AreEqual(vendor2, Vendor.GetById(102));
+      Assert.AreEqual(vendor2, Vendor.GetById(2));
     }
   }
 }
