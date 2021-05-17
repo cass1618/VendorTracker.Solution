@@ -32,9 +32,9 @@ namespace VendorTracker.Models
       return _vendorList[id-1];
     }
 
-    public void AddOrder(string title, string description, double cost)
+    public void AddOrder(string title, string description, double cost, int month, int day)
     {
-      Order newOrder = new(title, description, cost);
+      Order newOrder = new(title, description, cost, month, day);
       Orders.Add(newOrder);
     }
   }

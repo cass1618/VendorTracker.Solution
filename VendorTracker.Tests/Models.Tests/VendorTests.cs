@@ -42,8 +42,8 @@ namespace VendorTracker.Tests
     {
       Vendor.ClearAll();
       Vendor testVendor = new("Test Vendor");
-      Order testOrder = new("Test Order", "Test order description", 50);
-      testVendor.AddOrder("Test Order","Test order description",50);
+      Order testOrder = new("Test Order", "Test order description", 50, 1, 1);
+      testVendor.AddOrder("Test Order","Test order description",50, 1, 1);
       List<Order> expected = new List<Order>{testOrder};
       Assert.AreEqual(expected[0].GetType(), testVendor.Orders[0].GetType());
       Assert.AreEqual(expected[0].Title, testVendor.Orders[0].Title);
