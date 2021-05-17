@@ -1,7 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using VendorTracker.Models;
-using System;
 
 namespace VendorTracker.Tests
 {
@@ -28,5 +27,13 @@ namespace VendorTracker.Tests
       CollectionAssert.AreEqual(expected, Vendor.GetAll());
     }
 
+    [TestMethod]
+    public void GetById_ReturnsVendorWithGivenId_Vendor()
+    {
+      Vendor.ClearAll();
+      Vendor vendor1 = new("Vendor1");
+      Vendor vendor2 = new("Vendor2");
+      Assert.AreEqual(vendor2, Vendor.GetById(102));
+    }
   }
 }
