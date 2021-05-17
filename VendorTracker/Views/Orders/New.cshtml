@@ -4,16 +4,21 @@
     <title>VendorTracker - New Order</title>
   </head>
   <body>
-    <h1>Add a new order to @Model["vendor"].Name</h1>
+    <p>Add a new order to @Model.Name</p>
 
-<form action="/vendors/@Model.Id/orders" method="post">
-  <label for="title">Title</label>
-  <input id="title" name="title" type="text">
-  <label for="description">Description</label>
-  <input id="description" name="description" type="text">
-  <label for="cost">Cost</label>
-  <input id="cost" name="cost" type="text">
-  <button type='submit'>Add Order</button>
-</form>
+    <form action="/vendors/@Model.Id/orders" method="post">
+      <label for="title">Title</label>
+      <input id="title" name="title" type="text">
+      <label for="description">Description</label>
+      <input id="description" name="description" type="text">
+      <label for="cost">Cost</label>
+      <input id="cost" name="cost" type="text">
+      <p>When would you like this order delivered?</p>
+      <label for="month">Month</label>
+      <input id="month" name="month" type="text">
+      <label for="day">Day</label>
+      <input id="day" name="day" type="text">
+      <button type='submit'>Add Order</button>
+    </form>
   </body>
 </html>

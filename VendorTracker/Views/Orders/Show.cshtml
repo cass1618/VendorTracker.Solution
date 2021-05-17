@@ -1,13 +1,18 @@
+@using VendorTracker.Models;
+
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <title>VendorTracker - View Order</title>
+    <title>VendorTracker - Order</title>
   </head>
   <body>
+    <h1>Order Details</h1>
     <h2>@Model["order"].Title</h2>
-<h3>Vendor: @Model["vendor"].Name</h3>
+    <h2>@Model["order"].Description</h2>
+    <h2>@Model["order"].Cost</h2>
+    <h2>@Model["order"].DateOrdered</h2>
+    <h2>@Model["order"].DeliveryDate</h2>
 
-<a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
-<a href='/vendors'>View list of vendors</a>
+    <div><a href="/">HOME</a></div>
   </body>
 </html>

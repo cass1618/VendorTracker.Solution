@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using VendorTracker.Models;
 using System.Collections.Generic;
+using System;
 
 namespace VendorTracker.Controllers
 {
@@ -13,11 +14,13 @@ namespace VendorTracker.Controllers
       return View(vendor);
     }
 
-      [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
-      Order order = Order.GetById(orderId);
+      Console.WriteLine("orderId "+orderId);
+      Console.WriteLine("orders by vendor: "+Vendor.GetById(1).Orders[0].Title);
       Vendor vendor = Vendor.GetById(vendorId);
+      Order order = vendor.Orders[orderId-1];
       Dictionary<string, object> model = new Dictionary<string, object>();
       model.Add("order", order);
       model.Add("vendor", vendor);

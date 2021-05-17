@@ -17,6 +17,7 @@ namespace VendorTracker.Tests
       Assert.AreEqual("Test Order", testOrder.Title);
       Assert.AreEqual("test order", testOrder.Description);
       Assert.AreEqual(45.95, testOrder.Cost);
+      Assert.AreEqual(1, testOrder.Id);
       Assert.AreEqual(DateTime.Now.ToString(), testOrder.DateOrdered.ToString());
       Assert.AreEqual(expected, testOrder.DeliveryDate);
     }
