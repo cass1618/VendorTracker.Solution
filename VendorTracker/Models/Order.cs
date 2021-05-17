@@ -20,7 +20,12 @@ namespace VendorTracker.Models
       Cost = cost;
       DateOrdered = DateTime.Now;
       DeliveryDate = new DateTime(2021, month, day);
-      Id = _orderList.Count;
+      Id = _orderList.Count+1;
+    }
+
+    public static Order GetById(int id)
+    {
+      return _orderList[id-1];
     }
   }
 }

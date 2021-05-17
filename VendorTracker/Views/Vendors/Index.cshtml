@@ -7,10 +7,11 @@
   </head>
   <body>
     <h1>VENDORS</h1>
+    <a href="/vendors/new">Add new vendor</a>
     @foreach(Vendor currentVendor in Model)
     {
       <h2><a href="/vendors/@currentVendor.Id">@currentVendor.Name</a></h2>
     }
-  <!-- <div><a href="/">HOME</a></div> -->
+  <div><a href="/">HOME</a></div>
   </body>
 </html>

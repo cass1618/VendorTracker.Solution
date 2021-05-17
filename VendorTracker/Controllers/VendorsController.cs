@@ -5,7 +5,7 @@ using VendorTracker.Models;
 
 namespace VendorTracker.Controllers
 {
-  public class VendorController : Controller
+  public class VendorsController : Controller
   {
     [HttpGet("/vendors")]
     public ActionResult Index()
@@ -33,8 +33,8 @@ namespace VendorTracker.Controllers
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor vendor = Vendor.GetById(id);
       List<Order> categoryItems = vendor.Orders;
-      model.Add("Vendor:", vendor);
-      model.Add("Orders:", categoryItems);
+      model.Add("vendor", vendor);
+      model.Add("orders", categoryItems);
       return View(model);
     }
   }
