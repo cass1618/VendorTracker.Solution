@@ -13,7 +13,7 @@ namespace VendorTracker.Models
     {
       Name = name;
       Orders = new List<Order>{};
-      Id = _vendorList.Count;
+      Id = _vendorList.Count + 101;
     }
   }
 }
