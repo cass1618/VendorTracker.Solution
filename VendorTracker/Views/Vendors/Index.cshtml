@@ -1,0 +1,16 @@
+@using VendorTracker.Models;
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Vendors</title>
+  </head>
+  <body>
+    <h1>VENDORS</h1>
+    @foreach(Vendor currentVendor in Model)
+    {
+      <h2><a href="/vendors/@currentVendor.Id">@currentVendor.Name</a></h2>
+    }
+  <!-- <div><a href="/">HOME</a></div> -->
+  </body>
+</html>
