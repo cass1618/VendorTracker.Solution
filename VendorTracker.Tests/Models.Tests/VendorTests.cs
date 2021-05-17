@@ -35,5 +35,13 @@ namespace VendorTracker.Tests
       Vendor vendor2 = new("Vendor2");
       Assert.AreEqual(vendor2, Vendor.GetById(2));
     }
+
+    public void AddOrder_CreatesOrderAndAddsToOrderList_VendorList()
+    {
+      Vendor.ClearAll();
+      Vendor testVendor = new("Test Vendor");
+      testVendor.AddOrder(testOrder);
+      List<Order> expected = new List<Order>{testOrder};
+    }
   }
 }
