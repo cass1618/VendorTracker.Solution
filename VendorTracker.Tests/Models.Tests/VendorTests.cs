@@ -18,5 +18,14 @@ namespace VendorTracker.Tests
       Assert.AreEqual(typeof(List<Order>), testVendor.Orders.GetType());
     }
 
+    [TestMethod]
+    public void GetAll_ReturnsAllInstancesOfVendor_VendorList()
+    {
+      Vendor vendor1 = new("Vendor1");
+      Vendor vendor2 = new("Vendor2");
+      List<Vendor> expected = new List<Vendor>{vendor1, vendor2};
+      Assert.AreEqual(expected, Vendor.GetAll());
+    }
+
   }
 }
