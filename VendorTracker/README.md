@@ -4,12 +4,13 @@ By Cassandra Copp
 
 ## Description
 
-This web app allows the user to add Vendors and Orders as well as displaying them.  It uses multiple controllers.
+This web app allows the user to add and display Vendors, and add and display Orders for each vendor.
 
 ## Technologies Used
 
 * C#
 * .NET 5
+* ASP.NET MVC
 * MS Test
 
 ### Installation
@@ -26,10 +27,9 @@ $ dotnet run
 $ dotnet test
 ```
 
-
 ## Known bugs
 
-If back button is used to navigate OutOfIndex errors will occur.
+This application has no known bugs.
 
 ## License
 

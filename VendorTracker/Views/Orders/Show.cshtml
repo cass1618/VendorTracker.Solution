@@ -1,5 +1,3 @@
-@using VendorTracker.Models;
-
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -7,11 +5,11 @@
   </head>
   <body>
     <h1>Order Details</h1>
-    <h2>@Model["order"].Title</h2>
-    <h2>@Model["order"].Description</h2>
-    <h2>@Model["order"].Cost</h2>
-    <h2>@Model["order"].DateOrdered</h2>
-    <h2>@Model["order"].DeliveryDate</h2>
+    <h2>Title: @Model["order"].Title</h2>
+    <h2>Description: @Model["order"].Description</h2>
+    <h2>Cost: @Model["order"].Cost.ToString("c2")</h2>
+    <h2>Date Ordered: @Model["order"].DateOrdered.Date.ToString("d")</h2>
+    <h2>Date Expected: @Model["order"].DeliveryDate.Date.ToString("d")</h2>
 
     <div><a href="/">HOME</a></div>
   </body>

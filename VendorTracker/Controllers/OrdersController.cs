@@ -17,8 +17,6 @@ namespace VendorTracker.Controllers
     [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
-      Console.WriteLine("orderId "+orderId);
-      Console.WriteLine("orders by vendor: "+Vendor.GetById(1).Orders[0].Title);
       Vendor vendor = Vendor.GetById(vendorId);
       Order order = vendor.Orders[orderId-1];
       Dictionary<string, object> model = new Dictionary<string, object>();
