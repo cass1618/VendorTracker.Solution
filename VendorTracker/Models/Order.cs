@@ -21,11 +21,17 @@ namespace VendorTracker.Models
       DateOrdered = DateTime.Now;
       DeliveryDate = new DateTime(2021, month, day);
       Id = _orderList.Count+1;
+      _orderList.Add(this);
     }
 
     public static Order GetById(int id)
     {
       return _orderList[id-1];
+    }
+
+    public static void ClearAll()
+    {
+      _orderList.Clear();
     }
   }
 }

@@ -22,7 +22,7 @@ This web app allows the user to add and display Vendors, and add and display Ord
 $ dotnet run
 ```
 5. Open your web browser and enter `http://localhost:5000` into the address bar
-6. If you would like to run the included tests, enter the command
+6. If you would like to run the included tests, navigate to the VendorTracker.Solution/VendorTracker.Tests directory and enter the command
 ```cs
 $ dotnet test
 ```

@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using VendorTracker.Models;
 using System;
 
@@ -22,5 +21,13 @@ namespace VendorTracker.Tests
       Assert.AreEqual(expected, testOrder.DeliveryDate);
     }
 
+    [TestMethod]
+    public void GetById_ReturnsOrderWithGivenId_Order()
+    {
+      Order.ClearAll();
+      Order order1 = new("Order1", "description", 10, 1, 1);
+      Order order2 = new("Order2", "description", 20, 2, 2);
+      Assert.AreEqual(order2.Title, Order.GetById(2).Title);
+    }
   }
 }
